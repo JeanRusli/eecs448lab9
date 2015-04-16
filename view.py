@@ -1,3 +1,3 @@
 class View:
-	def function():
+	def displayCalculator():
 		print
