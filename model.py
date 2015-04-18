@@ -12,8 +12,8 @@ class Model:
 			except ValueError: #Input was not a number or 'ans' so requests the number again
 				return False
 	
-	def validateOperator(self, op): #Checks for valid operator input (+,-,*,/)
-		if op == "+" or op == "-" or op == "*" or op == "/":
+	def validateOperator(self, op): #Checks for valid operator input (+,-,*,/,^)
+		if op == "+" or op == "-" or op == "*" or op == "/" or op == "^":
 			return True
 		else:
 			return False
@@ -37,6 +37,8 @@ class Model:
 			self.sol = float(num1) - float(num2)
 		elif op == "*":
 			self.sol = float(num1) * float(num2)
-		else:
+		elif op == "/":
 			self.sol = float(num1) / float(num2)
+		else: # ^
+			self.sol = float(num1) ** float(num2)
 		return [num1, num2, op, self.sol]

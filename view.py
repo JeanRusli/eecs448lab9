@@ -1,20 +1,20 @@
 class View:
 	def welcomeMessage(self): #Outputs a welcome message
-		print "\n\n         Welcome to the Python Calculator!\n"
-		print "I can add, subtract, multiply, and divide 2 numbers.\n\n"
+		print "\n\n                Welcome to the Python Calculator!\n"
+		print "I can add, subtract, multiply, divide and exponentiate 2 numbers.\n\n"
 		print "You can always enter \'ans\' to use the previous solution as your input."
 	
 	def inputNumber(self, text): #Prompts user to input a number
 		return raw_input("\nInput %s Number: " % text)
 	
 	def inputOperator(self): #Prompts user to input an operator
-		return raw_input("\nInput Operator (+,-,*,/): ")
+		return raw_input("\nInput Operator (+,-,*,/,^): ")
 	
 	def invalidNumber(self): #Invalid Number Input Error
 		print "Either input a valid number or input \'ans\' without the quotes."
 	
 	def invalidOperator(self): #Invalid Operator Input Error
-		print "Must enter either +, -, *, or /."
+		print "Must enter either +, -, *, / or ^."
 	
 	def outputError(self, text): #Outputs the error message 'text'
 		print text
@@ -26,5 +26,5 @@ class View:
 		return raw_input("Would you like to continue? (y/N): ")
 	
 	def endMessage(self): #Outputs an end of program message
-		print "\nThank you for using our program. Have a great day!\n"
+		print "\n\nThank you for using our program. Have a great day!\n"
 		print "This program written by Jake Suddock and Jeanette Rusli\n\n"
