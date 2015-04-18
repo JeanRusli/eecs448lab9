@@ -17,6 +17,8 @@ class controller:
 				if Exit == False: #If input number is not valid
 					self.v.invalidNumber()
 					continue
+				else:
+					num1 = self.m.returnTrueValue(num1) #This changes the number to the previous solution if 'ans' was entered
 			
 			Exit = False
 			while Exit == False: #Loops until valid operator input
@@ -31,8 +33,10 @@ class controller:
 				num2 = self.v.inputNumber("2nd")
 				Exit = self.m.validateNumber(num2)
 				if Exit == False: #If input number is not valid
-					self.v.invalidOperator()
+					self.v.invalidNumber()
 					continue
+				else:
+					num2 = self.m.returnTrueValue(num2) #This changes the number to the previous solution if 'ans' was entered
 				if self.m.divByZero(num2, op) == True: #Checks for divide by zero error
 					self.v.outputError("Error! Divide By Zero!")
 					Exit = False

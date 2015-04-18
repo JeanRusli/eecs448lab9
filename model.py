@@ -18,8 +18,14 @@ class Model:
 		else:
 			return False
 	
+	def returnTrueValue(self, num): #If number is 'ans' then convert to that number
+		if num == "ans":
+			return str(self.sol)
+		else:
+			return num
+	
 	def divByZero(self, num2, op): #Checks for divide by zero
-		if num2 == 0 and op == "/":
+		if float(num2) == 0.0 and op == "/":
 			return True
 		else:
 			return False
